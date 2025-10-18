@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:week6/animate_test.dart';
 import 'package:week6/profile/profileinfo.dart';
+import 'package:week6/trafficlight/traficlight_widget.dart';
 
 
 void main() {
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Profileinfo(),
+      home: TraficlightWidget(),
     );
   }
 }
