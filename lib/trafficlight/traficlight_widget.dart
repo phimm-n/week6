@@ -16,7 +16,7 @@ class _TraficlightWidgetState extends State<TraficlightWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Traffic Light Animation'),
+        title: Text('Traffic Light Animation', style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor: Colors.deepPurpleAccent,
       ),
@@ -33,10 +33,16 @@ class _TraficlightWidgetState extends State<TraficlightWidget> {
                 decoration: BoxDecoration(
                   color: Colors.red,
                   borderRadius: BorderRadius.circular(50),
+                  boxShadow : [
+                    BoxShadow(
+                      color: Colors.red,
+                      blurRadius: 12,
+                    )
+                  ]
                 ),
               ),
             ),
-            SizedBox(height: 5),
+            SizedBox(height: 8),
             AnimatedOpacity(
               opacity: _yellowOpacity,
               duration: Duration(milliseconds: 500),
@@ -46,10 +52,16 @@ class _TraficlightWidgetState extends State<TraficlightWidget> {
                 decoration: BoxDecoration(
                   color: Colors.yellow,
                   borderRadius: BorderRadius.circular(50),
+                  boxShadow : [
+                    BoxShadow(
+                      color: Colors.yellow,
+                      blurRadius: 12,
+                    )
+                  ]
                 ),
               ),
             ),
-            SizedBox(height: 5),
+            SizedBox(height: 8),
             AnimatedOpacity(
               opacity: _greenOpacity,
               duration: Duration(milliseconds: 500),
@@ -59,6 +71,12 @@ class _TraficlightWidgetState extends State<TraficlightWidget> {
                 decoration: BoxDecoration(
                   color: Colors.green,
                   borderRadius: BorderRadius.circular(50),
+                  boxShadow : [
+                    BoxShadow(
+                      color: Colors.green,
+                      blurRadius: 12,
+                    )
+                  ]
                 ),
               ),
             ),
